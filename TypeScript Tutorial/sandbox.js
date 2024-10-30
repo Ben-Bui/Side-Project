@@ -10,7 +10,7 @@ isLoggedin = true;
 var ninjas = [];
 ninjas.push('shaun');
 //union types
-var mixed = (string | number | boolean)[] = [];
+var mixed = [];
 mixed.push('hello');
 mixed.push(20);
 mixed.push(false);
@@ -23,4 +23,3 @@ var ninjaOne;
 ninjaOne = { name: 'yoshi', age: 30 };
 var ninjaTwo;
 ninjaTwo = { name: 'mario', age: 20, beltColour: 'black' };
-//as
