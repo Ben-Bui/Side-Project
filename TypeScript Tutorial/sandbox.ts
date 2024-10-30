@@ -15,7 +15,7 @@ let ninjas: string[] = [];
 ninjas.push('shaun');
 
 //union types
-let mixed = (string|number|boolean)[] = [];
+let mixed : (string|number|boolean)[] = [];
 mixed.push('hello');
 mixed.push(20);
 mixed.push(false);

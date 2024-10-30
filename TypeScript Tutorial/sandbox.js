@@ -23,3 +23,4 @@ var ninjaOne;
 ninjaOne = { name: 'yoshi', age: 30 };
 var ninjaTwo;
 ninjaTwo = { name: 'mario', age: 20, beltColour: 'black' };
+//as
