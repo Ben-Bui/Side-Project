@@ -40,6 +40,7 @@ const docTwo = {
     resourceType: ResourceType.PERSON,
     data: { name: 'yoshi' }
 };
+console.log(docOne, docTwo);
 // Generics
 // const addUID = <T extends {name: string}>(obj: T) => {
 //     let uid = Math.floor(Math.random() * 100);
