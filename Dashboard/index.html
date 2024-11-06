@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looker Studio Dashboard</title>
+  </head>
+  <body>
+    <h1>Looker Studio Dashboard</h1>
+
+    <!-- Embed Looker Studio Dashboard -->
+    <iframe
+      id="looker-studio-iframe"
+      width="90%"
+      height="900"
+      src="https://lookerstudio.google.com/embed/reporting/96084f0b-b4ea-467e-8f7a-0b271cb0468d/page/7dpIE"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen
+      sandbox="allow-scripts allow-same-origin allow-popups"
+    ></iframe>
+
+    <script>
+      // Refresh iframe every 5 seconds (5000ms)
+      setInterval(function() {
+        const iframe = document.getElementById("looker-studio-iframe");
+        iframe.src = iframe.src; // Reload the iframe to refresh the data
+      }, 60000); // Refresh every 5 seconds
+    </script>
+  </body>
+</html>
