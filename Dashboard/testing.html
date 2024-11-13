@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded Dashboard</title>
+</head>
+<body>
+  <h1>Embedded Dashboard/Content Viewer</h1>
+  <iframe
+    id="content-iframe"
+    width="90%"
+    height="900"
+    src="YOUR_EMBED_URL_HERE"
+    frameborder="0"
+    style="border: 0"
+    allowfullscreen
+    sandbox="allow-scripts allow-same-origin allow-popups"
+  ></iframe>
+
+  <script>
+    // URL array for slideshow functionality
+    const urls = [
+      "YOUR_FIRST_EMBED_URL_HERE",
+      "YOUR_SECOND_EMBED_URL_HERE",
+      // Add more URLs as needed
+    ];
+    let currentIndex = 0;
+
+    // Function to load the next URL in the iframe
+    function loadNextUrl() {
+      const iframe = document.getElementById("content-iframe");
+      iframe.src = urls[currentIndex];
+      currentIndex = (currentIndex + 1) % urls.length;
+    }
+
+    // Slideshow interval: Switch URLs every 3 minutes (180,000 ms)
+    setInterval(loadNextUrl, 180000);
+
+    // Auto-Refresh interval: Refresh the current iframe content every 5 minutes (300,000 ms)
+    setInterval(function() {
+      const iframe = document.getElementById("content-iframe");
+      iframe.src = iframe.src;
+    }, 300000);
+
+    // Initial load
+    loadNextUrl();
+  </script>
+</body>
+</html>
